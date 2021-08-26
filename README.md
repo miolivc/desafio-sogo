@@ -1,5 +1,5 @@
 # Desafio Backend Java - SOGO Tecnologia
-Repositório destinado a solução do desafio imposto pela SOGO para a vaga de Backend Java
+Repositório destinado a solução do desafio para a vaga de Backend Java na SOGO Tecnologia
 
 ## Execução do Projeto:
 
