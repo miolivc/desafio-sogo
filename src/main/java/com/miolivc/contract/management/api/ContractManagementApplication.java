@@ -1,13 +1,13 @@
-package com.miolivc.contractmanagementapi;
+package com.miolivc.contract.management.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ContractManagementApiApplication {
+public class ContractManagementApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ContractManagementApiApplication.class, args);
+		SpringApplication.run(ContractManagementApplication.class, args);
 	}
 
 }
