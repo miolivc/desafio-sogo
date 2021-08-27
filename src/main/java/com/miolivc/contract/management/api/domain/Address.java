@@ -39,6 +39,10 @@ public class Address {
     @Column(length = 150, nullable = false)
     private String city;
 
+    @Pattern(
+            regexp = "[A-z][A-z]",
+            message = "A UF deve ser composta por duas letras maiúsculas"
+    )
     @NotBlank(message = "A UF não pode estar vazia")
     @Column(length = 2, nullable = false)
     private String state;
