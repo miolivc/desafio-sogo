@@ -11,7 +11,6 @@ services:
             - 5432:5432
         restart: always
     contract-management-api:
-        container_name: contract-management-api
         build: .
         ports: 
             - 8080:8080
