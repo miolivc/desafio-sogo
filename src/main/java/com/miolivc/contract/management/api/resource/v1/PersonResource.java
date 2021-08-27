@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;
-import javax.validation.ValidationException;
 import java.net.URI;
 import java.util.Optional;
 
