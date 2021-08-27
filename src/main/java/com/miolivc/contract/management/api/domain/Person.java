@@ -22,8 +22,7 @@ public class Person {
 
     @Pattern(
             regexp = "[A-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]+([ ][A-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]+)*",
-            message = "O nome deve atender ao padrão," +
-                    " sendo pelo menos dois nomes sem conter caracteres especiais"
+            message = "O nome deve atender ao padrão, sendo pelo menos dois nomes"
     )
     @NotBlank(message = "O nome não pode estar vazio")
     @JsonProperty(required = true)
