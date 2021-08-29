@@ -1,8 +1,8 @@
 package com.miolivc.contract.management.api.domain;
 
-import lombok.Data;
-
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.validator.constraints.br.CPF;
 
