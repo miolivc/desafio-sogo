@@ -24,7 +24,7 @@ public class ContractResource {
     ResponseEntity<List<Contract>> getAll() {
         var contracts = repository.findAll();
 
-        if (contracts == null || ! contracts.isEmpty()) {
+        if (contracts == null || contracts.isEmpty()) {
             throw new ResourceNotFoundException(Contract.class);
         }
 

@@ -32,7 +32,7 @@ public class Contract {
     @JsonFormat(pattern = "yyyy-MM-dd", shape = JsonFormat.Shape.STRING)
     private LocalDate expirationDate;
 
-    @OneToOne(optional = false)
+    @ManyToOne(optional = false)
     private Person person;
 
     @PostPersist
