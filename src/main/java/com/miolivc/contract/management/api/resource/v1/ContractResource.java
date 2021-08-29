@@ -21,8 +21,14 @@ public class ContractResource {
     private ContractRepository repository;
 
     @GetMapping("/contracts")
-    ResponseEntity<List<Contract>> getAll() {
-        var contracts = repository.findAll();
+    ResponseEntity<List<Contract>> getAll(@RequestParam(value = "daysToExpire", required = false) Integer daysToExpire) {
+
+        List<Contract> contracts;
+        if (daysToExpire != null) {
+            contracts = repository.getContractsDueIn(daysToExpire);
+        } else {
+            contracts = repository.findAll();
+        }
 
         if (contracts == null || contracts.isEmpty()) {
             throw new ResourceNotFoundException(Contract.class);
