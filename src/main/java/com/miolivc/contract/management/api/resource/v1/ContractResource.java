@@ -4,7 +4,6 @@ import com.miolivc.contract.management.api.database.ContractRepository;
 import com.miolivc.contract.management.api.domain.Contract;
 import com.miolivc.contract.management.api.exception.ResourceNotFoundException;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -72,6 +71,23 @@ public class ContractResource {
 
         return ResponseEntity
                 .created(location)
+                .build();
+    }
+
+    @ApiOperation(value = "Remove a contract by id")
+    @DeleteMapping(value = "/contract/{id}")
+    public ResponseEntity delete(@PathVariable("id") Long id) {
+
+        if (id == null || id < 1) {
+            return ResponseEntity
+                    .status(HttpStatus.BAD_REQUEST)
+                    .body("É necessario informar um ID valido");
+        }
+
+        repository.deleteById(id);
+
+        return ResponseEntity
+                .ok()
                 .build();
     }
 
