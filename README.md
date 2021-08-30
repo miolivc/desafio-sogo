@@ -23,3 +23,16 @@ Repositório destinado a solução do desafio para a vaga de Backend Java na SOG
 
 * **JSON endpoint:** `http://localhost:8080/api/v1/api-docs`
 * **Swagger UI:** `http://localhost:8080/api/v1/swagger-ui/`
+
+## Autenticação para utilizaçao da API:
+
+* É necessário realizar chamada POST ao endpoint `/authenticate` usando as credenciais no body:
+
+```
+{
+	"username": "gestor", 
+	"password": "gestor@123"
+}
+```
+
+* Para demais requisições adicionar o cabeçalho `Authentication: Bearer <your_generated_token>`, utilizando o token retornado pelo `/authenticate`
