@@ -18,3 +18,8 @@ Repositório destinado a solução do desafio para a vaga de Backend Java na SOG
         `docker-compose up -d` ou `sudo docker-compose up -d`.
 
     **Observação:** Necessário possuir `docker` e `docker-compose` instalados.
+
+## Documentação da API:
+
+* **JSON endpoint:** `http://localhost:8080/api/v1/api-docs`
+* **Swagger UI:** `http://localhost:8080/api/v1/swagger-ui/`

@@ -3,6 +3,7 @@ package com.miolivc.contract.management.api.resource.v1;
 import com.miolivc.contract.management.api.database.PersonRepository;
 import com.miolivc.contract.management.api.domain.Person;
 import com.miolivc.contract.management.api.exception.ResourceNotFoundException;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +20,7 @@ public class PersonResource {
     @Autowired
     private PersonRepository repository;
 
+    @ApiOperation(value = "Return all saved person")
     @GetMapping("/persons")
     ResponseEntity getAll() {
         var persons = repository.findAll();
@@ -30,6 +32,7 @@ public class PersonResource {
         return ResponseEntity.ok(persons);
     }
 
+    @ApiOperation(value = "Return saved person by id")
     @GetMapping("/person/{id}")
     ResponseEntity findById(@PathVariable("id") Long id) {
 
@@ -48,6 +51,7 @@ public class PersonResource {
         return ResponseEntity.ok(person.get());
     }
 
+    @ApiOperation(value = "Save a person")
     @PostMapping("/person")
     ResponseEntity save(@Valid @RequestBody Person person) {
 
@@ -63,6 +67,7 @@ public class PersonResource {
                 .build();
     }
 
+    @ApiOperation(value = "Remove a person by id")
     @DeleteMapping(value = "/person/{id}")
     public ResponseEntity delete(@PathVariable("id") Long id) {
 

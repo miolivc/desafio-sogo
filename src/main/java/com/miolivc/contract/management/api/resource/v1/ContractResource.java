@@ -3,6 +3,8 @@ package com.miolivc.contract.management.api.resource.v1;
 import com.miolivc.contract.management.api.database.ContractRepository;
 import com.miolivc.contract.management.api.domain.Contract;
 import com.miolivc.contract.management.api.exception.ResourceNotFoundException;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,6 +22,7 @@ public class ContractResource {
     @Autowired
     private ContractRepository repository;
 
+    @ApiOperation(value = "Get all contracts and also filter by daysToExpire")
     @GetMapping("/contracts")
     ResponseEntity<List<Contract>> getAll(@RequestParam(value = "daysToExpire", required = false) Integer daysToExpire) {
 
@@ -37,6 +40,7 @@ public class ContractResource {
         return ResponseEntity.ok(contracts);
     }
 
+    @ApiOperation(value = "Get a contract by number")
     @GetMapping("/contract/{number}")
     ResponseEntity findById(@PathVariable("number") Long number) {
 
@@ -55,6 +59,7 @@ public class ContractResource {
         return ResponseEntity.ok(contract.get());
     }
 
+    @ApiOperation(value = "Save a Contract")
     @PostMapping("/contract")
     ResponseEntity<Contract> save(@Valid @RequestBody Contract contract) {
 
