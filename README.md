@@ -42,4 +42,4 @@ Repositório destinado a solução do desafio para a vaga de Backend Java na SOG
 * Implementada na entidade `Person` no endpoint: `/personQuery` seguindo o JPA Specification Query Language (uso do `spring-search` para abstrair QueryBindings)
 
 ### Observações: 
-* Para auxiliar nas requisições a API existe um arquivo `Insomnia_requests.json` que pode utilizado na realizaçao dos testes
+* Para auxiliar nas requisições à API existe um arquivo `Insomnia_requests.json` na raíz do projeto que pode utilizado na realizaçao dos testes
