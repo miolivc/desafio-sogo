@@ -17,7 +17,7 @@ import javax.validation.constraints.Pattern;
 public class Person {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "pessoa_seq")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "person_seq")
     private Long id;
 
     @Pattern(
