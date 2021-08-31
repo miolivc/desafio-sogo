@@ -42,7 +42,7 @@ class AuthResourceTest {
     }
 
     @Test
-    void authenticateForbidenError() throws Exception {
+    void authenticateUnauthorizedError() throws Exception {
         var invalidUser = new AuthUser("gestor", "gestor");
         var requestJson = mapper.writeValueAsString(invalidUser);
 
@@ -50,7 +50,7 @@ class AuthResourceTest {
                         .post("/authenticate")
                         .content(requestJson)
                         .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isForbidden());
+                .andExpect(status().isUnauthorized());
     }
 
 }
