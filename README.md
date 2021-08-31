@@ -36,3 +36,7 @@ Repositório destinado a solução do desafio para a vaga de Backend Java na SOG
 ```
 
 * Para demais requisições adicionar o cabeçalho `Authentication: Bearer <your_generated_token>`, utilizando o token retornado pelo `/authenticate`
+
+## Pesquisa avançada:
+
+* Implementada na entidade `Person` no endpoint: `/personQuery` seguindo o JPA Specification Query Language.

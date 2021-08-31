@@ -3,8 +3,10 @@ package com.miolivc.contract.management.api.resource.v1;
 import com.miolivc.contract.management.api.database.PersonRepository;
 import com.miolivc.contract.management.api.domain.Person;
 import com.miolivc.contract.management.api.exception.ResourceNotFoundException;
+import com.sipios.springsearch.anotation.SearchSpec;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -28,6 +30,15 @@ public class PersonResource {
         if (persons == null || persons.isEmpty()) {
             throw new ResourceNotFoundException(Person.class);
         }
+
+        return ResponseEntity.ok(persons);
+    }
+
+    @GetMapping("/personQuery")
+    ResponseEntity search(@SearchSpec Specification<Person> specs) {
+
+        var persons = repository.findAll(Specification.where(specs));
+        if (persons == null ||  persons.isEmpty()) throw new ResourceNotFoundException(Person.class);
 
         return ResponseEntity.ok(persons);
     }
