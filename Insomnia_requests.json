@@ -1,0 +1,503 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2021-08-31T20:29:30.554Z",
+  "__export_source": "insomnia.desktop.app:v2021.4.1",
+  "resources": [
+    {
+      "_id": "req_3cee780839354a1c958c02cd6b3ae12c",
+      "parentId": "wrk_8a6abd4180614d23b4429dbf13843662",
+      "modified": 1630441071983,
+      "created": 1630351994875,
+      "url": "http://localhost:8080/api/v1/authenticate",
+      "name": "Get AccessToken",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"username\": \"gestor\", \n\t\"password\": \"gestor@123\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_c245ed9a7e6248ac8375423b934a59ff"
+        },
+        {
+          "id": "pair_314e3cb84ff04e5bb0713c42529b9e31",
+          "name": "",
+          "value": "",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1630351994875,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "wrk_8a6abd4180614d23b4429dbf13843662",
+      "parentId": null,
+      "modified": 1630022357903,
+      "created": 1630022357903,
+      "name": "SOGO",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_5573069eba8a4532b3a7b9afba0bd53a",
+      "parentId": "wrk_8a6abd4180614d23b4429dbf13843662",
+      "modified": 1630441655778,
+      "created": 1630265327508,
+      "url": "http://localhost:8080/api/v1/dashboard/contract",
+      "name": "Dashboard",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_56ba6a37031c40749a0e08df5d684bfa",
+          "name": "Authorization",
+          "value": "Bearer  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnZXN0b3IiLCJleHAiOjE2MzA0NjUwMzksImlhdCI6MTYzMDQyOTAzOX0.EPL9vJrdRiSRoDRxng0rhqBHLQE_JCG-9yo3hhv9Pjw",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1630104756973.1875,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_a2a40cf264584f41a506fb8d1a3cff82",
+      "parentId": "fld_8c9098b848fc457a88dab2cd4757ad36",
+      "modified": 1630441329028,
+      "created": 1630057954223,
+      "url": "http://localhost:8080/api/v1/person",
+      "name": "Add pessoa",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"João Matheus de Paula\",\n\t\"cpf\": \"726.456.671-47\",\n\t\"address\": {\n\t\t\"cep\": \"75802-395\",\n\t\t\"street\": \"Rua Aragarças\",\n\t\t\"number\": \"929A\",\n\t\t\"additional\": \"Casa\",\n\t\t\"district\": \"Setor Fabriny\",\n\t\t\"city\": \"Jataí\",\n\t\t\"state\": \"GO\",\n\t\t\"country\": \"Brasil\"\n\t}\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_aeb706515f62492fa4aa3da2c1c1c6b1"
+        },
+        {
+          "id": "pair_20b008ace23f48f58cede97129feaa57",
+          "name": "Authorization",
+          "value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnZXN0b3IiLCJleHAiOjE2MzA0NTEyMDQsImlhdCI6MTYzMDQxNTIwNH0.tPujDpGJ1hqiMn41AtyyG1lGOuU6INEtQmNxQI8w0ZI",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1630396636078.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_8c9098b848fc457a88dab2cd4757ad36",
+      "parentId": "wrk_8a6abd4180614d23b4429dbf13843662",
+      "modified": 1630441604236,
+      "created": 1630441277282,
+      "name": "Person",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1629857519071.375,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_bfc0beb2a461490d897095d50bbfc61b",
+      "parentId": "fld_8c9098b848fc457a88dab2cd4757ad36",
+      "modified": 1630441335625,
+      "created": 1630057938374,
+      "url": "http://localhost:8080/api/v1/persons",
+      "name": "Mostrar pessoas",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_d1f6fa68ef284df497fc81b0fc4788c5",
+          "name": "Authorization",
+          "value": "Bearer  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnZXN0b3IiLCJleHAiOjE2MzA0NTEyMDQsImlhdCI6MTYzMDQxNTIwNH0.tPujDpGJ1hqiMn41AtyyG1lGOuU6INEtQmNxQI8w0ZI",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1630396636028.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_c973535996844c17845b7e775753c7fa",
+      "parentId": "fld_8c9098b848fc457a88dab2cd4757ad36",
+      "modified": 1630441455212,
+      "created": 1630441450958,
+      "url": "http://localhost:8080/api/v1/person/id",
+      "name": "Dados pessoa by id",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_d1f6fa68ef284df497fc81b0fc4788c5",
+          "name": "Authorization",
+          "value": "Bearer  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnZXN0b3IiLCJleHAiOjE2MzA0NTEyMDQsImlhdCI6MTYzMDQxNTIwNH0.tPujDpGJ1hqiMn41AtyyG1lGOuU6INEtQmNxQI8w0ZI",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1630396636016,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_19ab43116269401180f718fe065e2a3f",
+      "parentId": "fld_8c9098b848fc457a88dab2cd4757ad36",
+      "modified": 1630441367522,
+      "created": 1630415195674,
+      "url": "http://localhost:8080/api/v1/personsQuery?address.cep=75802-395 AND address.country=Brasil",
+      "name": "Advanced Search pessoa",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_d1f6fa68ef284df497fc81b0fc4788c5",
+          "name": "Authorization",
+          "value": "Bearer  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnZXN0b3IiLCJleHAiOjE2MzA0NTEyMDQsImlhdCI6MTYzMDQxNTIwNH0.tPujDpGJ1hqiMn41AtyyG1lGOuU6INEtQmNxQI8w0ZI",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1630396636003.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_d27ce0a5949d40c98ffd40e36b364696",
+      "parentId": "fld_8c9098b848fc457a88dab2cd4757ad36",
+      "modified": 1630441355440,
+      "created": 1630267363976,
+      "url": "http://localhost:8080/api/v1/person/1",
+      "name": "Deletar pessoa",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_197a424ccea644b7916f335dde267249",
+          "name": "Authorization",
+          "value": "Bearer  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnZXN0b3IiLCJleHAiOjE2MzAzODk5MjYsImlhdCI6MTYzMDM1MzkyNn0.8RJSM44-PYLyPY_HSeGSSmsgd9zUQ8z-Ekxrivqa59s",
+          "description": ""
+        },
+        {
+          "id": "pair_1b6612d747ec4b8495d239b96aa0797a",
+          "name": "",
+          "value": "",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1630396635978.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_0d4714ac01834b87928956e4d9c7267a",
+      "parentId": "fld_0d1fb2a80b06424cb5a2f966c7939c5c",
+      "modified": 1630441523525,
+      "created": 1630073125209,
+      "url": "http://localhost:8080/api/v1/contracts",
+      "name": "Listar Contrato",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_4d9c8548784e4f1d830fb21bd6b6e9de",
+          "name": "Authorization",
+          "value": "Bearer  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnZXN0b3IiLCJleHAiOjE2MzAzODk5MjYsImlhdCI6MTYzMDM1MzkyNn0.8RJSM44-PYLyPY_HSeGSSmsgd9zUQ8z-Ekxrivqa59s",
+          "description": ""
+        },
+        {
+          "id": "pair_d0081dcd40d0485fad450ec4c65feb5b",
+          "name": "",
+          "value": "",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1628291677940.625,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_0d1fb2a80b06424cb5a2f966c7939c5c",
+      "parentId": "wrk_8a6abd4180614d23b4429dbf13843662",
+      "modified": 1630441503155,
+      "created": 1630441488371,
+      "name": "Contract",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1629363043267.75,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_4e2af4b0c572496fb0b89513a0cd8173",
+      "parentId": "fld_0d1fb2a80b06424cb5a2f966c7939c5c",
+      "modified": 1630441643544,
+      "created": 1630274219070,
+      "url": "http://localhost:8080/api/v1/contracts?daysToExpire=30",
+      "name": "Filter Contrato by daysToExpire",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_44c5007aee9549faaa52bdc2968ca9f1",
+          "name": "Authorization",
+          "value": "Bearer  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnZXN0b3IiLCJleHAiOjE2MzAzODk5MjYsImlhdCI6MTYzMDM1MzkyNn0.8RJSM44-PYLyPY_HSeGSSmsgd9zUQ8z-Ekxrivqa59s",
+          "description": ""
+        },
+        {
+          "id": "pair_bf959cbda1a844ffa2cb849e3b4e8b6f",
+          "name": "",
+          "value": "",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1628291677928.125,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_4f4db1d253bd41dcbc7e77dfaf46e813",
+      "parentId": "fld_0d1fb2a80b06424cb5a2f966c7939c5c",
+      "modified": 1630441533658,
+      "created": 1630073547537,
+      "url": "http://localhost:8080/api/v1/contract/1",
+      "name": "Mostrar Contrato by id",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_330fb2dcb0924ad7b993ba976e8712ef",
+          "name": "Authorization",
+          "value": "Bearer  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnZXN0b3IiLCJleHAiOjE2MzAzODk5MjYsImlhdCI6MTYzMDM1MzkyNn0.8RJSM44-PYLyPY_HSeGSSmsgd9zUQ8z-Ekxrivqa59s",
+          "description": ""
+        },
+        {
+          "id": "pair_6470e3f9f73e4459bb1ab4d4c8d34dc9",
+          "name": "",
+          "value": "",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1628291677915.625,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_b8dfe8ee391b4ef4bfd763eabfb62229",
+      "parentId": "fld_0d1fb2a80b06424cb5a2f966c7939c5c",
+      "modified": 1630441512067,
+      "created": 1630073571182,
+      "url": "http://localhost:8080/api/v1/contract",
+      "name": "Add Contrato",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"number\": 1,\n\t\"person\": {\n\t\t\"id\": 1\n\t},\n\t\"registerDate\": \"2021-08-28\",\n  \"expirationDate\": \"2021-10-30\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_96716cd1e73744a496d090d4a1187b8a"
+        },
+        {
+          "id": "pair_7192f5cc5f004ff3a5fc4be3e3da7037",
+          "name": "Authorization",
+          "value": "Bearer  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnZXN0b3IiLCJleHAiOjE2MzAzODk5MjYsImlhdCI6MTYzMDM1MzkyNn0.8RJSM44-PYLyPY_HSeGSSmsgd9zUQ8z-Ekxrivqa59s",
+          "description": ""
+        },
+        {
+          "id": "pair_19b9f5203542414ca53d7f056905b66c",
+          "name": "",
+          "value": "",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1628291677890.625,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_beb505bfd1f5497abc02d7c92454c170",
+      "parentId": "wrk_8a6abd4180614d23b4429dbf13843662",
+      "modified": 1630441610109,
+      "created": 1630064219013,
+      "url": "http://localhost:8080/api/v1/api-docs",
+      "name": "Swagger Json",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1628271074398.1562,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_b1881558577f994685a238b9d7f8f6e848e73783",
+      "parentId": "wrk_8a6abd4180614d23b4429dbf13843662",
+      "modified": 1630022358084,
+      "created": 1630022358084,
+      "name": "Base Environment",
+      "data": {},
+      "dataPropertyOrder": null,
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1630022358084,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_b1881558577f994685a238b9d7f8f6e848e73783",
+      "parentId": "wrk_8a6abd4180614d23b4429dbf13843662",
+      "modified": 1630352562676,
+      "created": 1630022358089,
+      "name": "Default Jar",
+      "cookies": [
+        {
+          "key": "PHPSESSID",
+          "value": "f6a4ba6365a7b0e09564db050a0bdcab",
+          "domain": "extendsclass.com",
+          "path": "/",
+          "hostOnly": true,
+          "creation": "2021-08-27T13:19:42.466Z",
+          "lastAccessed": "2021-08-27T13:19:42.466Z",
+          "id": "9078526775424784"
+        },
+        {
+          "key": "JSESSIONID",
+          "value": "5E974F7D242326545783FDF2F0C18020",
+          "domain": "localhost",
+          "path": "/api/v1",
+          "httpOnly": true,
+          "hostOnly": true,
+          "creation": "2021-08-30T19:37:14.442Z",
+          "lastAccessed": "2021-08-30T19:42:42.676Z",
+          "id": "861420563616293"
+        }
+      ],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_402c26046a4244dc99293a1f47d3df36",
+      "parentId": "wrk_8a6abd4180614d23b4429dbf13843662",
+      "modified": 1630022357927,
+      "created": 1630022357927,
+      "fileName": "SOGO",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    }
+  ]
+}
