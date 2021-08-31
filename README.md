@@ -39,4 +39,4 @@ Repositório destinado a solução do desafio para a vaga de Backend Java na SOG
 
 ## Pesquisa avançada:
 
-* Implementada na entidade `Person` no endpoint: `/personQuery` seguindo o JPA Specification Query Language.
+* Implementada na entidade `Person` no endpoint: `/personQuery` seguindo o JPA Specification Query Language (uso do `spring-search` para abstrair QueryBindings)
