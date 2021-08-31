@@ -18,7 +18,7 @@ CREATE TABLE person (
 CREATE TABLE contract (
     number BIGINT PRIMARY KEY CHECK (number > 0),
     register_date DATE NOT NULL CHECK (register_date <= NOW()),
-    expiration_date DATE NOT NULL CHECK (expiration_date >= NOW()),
+    expiration_date DATE NOT NULL CHECK (expiration_date >= register_date),
     person_id BIGINT NOT NULL,
     FOREIGN KEY (person_id) REFERENCES person(id)
         ON UPDATE CASCADE ON DELETE RESTRICT
